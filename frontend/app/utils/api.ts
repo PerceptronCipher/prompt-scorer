@@ -1,4 +1,4 @@
-const BASE_URL = 'https://prompt-scorer-backend.onrender.com'
+const BASE_URL = 'http://44.222.98.52:8000'
 
 export const scorePrompt = async (promptText: string) => {
   const response = await fetch(`${BASE_URL}/score`, {
