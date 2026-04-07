@@ -1,3 +1,4 @@
+//prompt-scorer/frontend/app/components/scorer/InputArea.tsx
 'use client'
 
 import React from 'react'
