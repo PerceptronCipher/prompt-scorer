@@ -50,7 +50,7 @@ import { useState } from 'react'
 import InputArea from '@/app/components/scorer/InputArea'
 import Results from '@/app/components/scorer/Results'
 
-// It's cleaner to pull this out into a constant
+// Constant for the API endpoint
 const API_URL = 'http://44.222.98.52:8000/score'
 
 export default function ScorerCard() {
@@ -65,12 +65,12 @@ export default function ScorerCard() {
     setError(null)
 
     try {
-      const res = await fetch(
-        'http://44.222.98.52:8000/score',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ prompt }),
+      // FIX: The options object now correctly contains method, headers, and body
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({ prompt }),
       })
@@ -81,7 +81,7 @@ export default function ScorerCard() {
 
       const result = await res.json()
 
-      // Store the result only if it contains data
+      // Store the result
       setData(result)
     } catch (e: any) {
       console.error('API Error:', e)
@@ -116,7 +116,7 @@ export default function ScorerCard() {
         </div>
       )}
 
-      {/* Simple Loading Placeholder for smooth UI */}
+      {/* Loading State UI */}
       {loading && (
         <div className='mt-12 h-64 flex flex-col items-center justify-center space-y-4 opacity-50'>
           <div className='w-12 h-12 border-4 border-brand-blue border-t-transparent rounded-full animate-spin' />
