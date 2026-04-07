@@ -1,12 +1,12 @@
 'use client'
 
 import React from 'react'
-import { PencilLine, FileSignature, Zap } from 'lucide-react' // Icons matched to reference image
+import { PencilLine, FileSignature, Zap } from 'lucide-react' 
 
 const docs = [
-  { title: 'Prompt writing guides', icon: PencilLine }, // Icon matched (pencil)
-  { title: 'Before vs after examples', icon: FileSignature }, // Icon matched (document pencil)
-  { title: 'Best practices', icon: Zap }, // Icon matched (bolt)
+  { title: 'Prompt writing guides', icon: PencilLine }, 
+  { title: 'Before vs after examples', icon: FileSignature }, 
+  { title: 'Best practices', icon: Zap },
 ]
 
 export default function Docs() {
