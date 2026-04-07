@@ -11,7 +11,7 @@ export default function ScorerCard() {
     setLoading(true)
     try {
       const res = await fetch(
-        'https://prompt-scorer-backend.onrender.com/score',
+        'http://44.222.98.52:8000',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
