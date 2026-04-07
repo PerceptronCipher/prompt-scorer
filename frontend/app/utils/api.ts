@@ -1,9 +1,7 @@
-//prompt-scorer/frontend/app/utils/api.ts
-// const BASE_URL = 'https://prompt-scorer-backend.onrender.com' 
-const BASE_URL = 'http://44.222.98.52:8000/docs'
+const BASE_URL = 'http://44.222.98.52:8000'
 
 export const scorePrompt = async (promptText: string) => {
-  const response = await fetch(`${BASE_URL}/score`, {
+  const response = await fetch(`${BASE_URL}/api/score`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt: promptText }), 

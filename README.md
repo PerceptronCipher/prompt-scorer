@@ -1,6 +1,6 @@
 # Prompt Quality Scorer
 
-> Built by [BuilON](https://builon.com) for [JustXend](https://justxend.com)
+> Built by BuildON for JustXend
 
 Paste any AI prompt and get an instant quality score with detailed feedback and an improved version — so you always get the best out of your AI tools.
 
@@ -11,7 +11,7 @@ Paste any AI prompt and get an instant quality score with detailed feedback and 
 | Service | URL |
 |---|---|
 | Backend API | _Coming soon_ |
-| Frontend | _Coming soon_ |
+| Frontend | https://prompt-scorer-ashen.vercel.app |
 
 ---
 
@@ -30,7 +30,7 @@ Paste any AI prompt and get an instant quality score with detailed feedback and 
 | Backend | Python, FastAPI |
 | AI | OpenAI GPT-4o |
 | Frontend | Next.js, TypeScript, Tailwind CSS |
-| Hosting | Render (backend), Vercel (frontend) |
+| Hosting | AWS (backend), Vercel (frontend) |
 
 ---
 

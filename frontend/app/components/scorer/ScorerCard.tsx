@@ -65,11 +65,12 @@ export default function ScorerCard() {
     setError(null)
 
     try {
-      const res = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+      const res = await fetch(
+        'http://44.222.98.52:8000/score',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt }),
         },
         body: JSON.stringify({ prompt }),
       })
