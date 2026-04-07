@@ -11,7 +11,7 @@ export default function ScorerCard() {
     setLoading(true)
     try {
       const res = await fetch(
-        'http://44.222.98.52:8000',
+        'http://44.222.98.52:8000/score',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
