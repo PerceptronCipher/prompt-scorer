@@ -62,33 +62,39 @@
 //   )
 // }
 
-'use client'
+"use client";
 
-import React from 'react'
-import { FaLinkedinIn, FaInstagram, FaXTwitter } from 'react-icons/fa6' // Using Font Awesome 6 for the latest X logo
+import Image from "next/image";
+import React from "react";
+import { FaLinkedinIn, FaInstagram, FaXTwitter } from "react-icons/fa6"; // Using Font Awesome 6 for the latest X logo
+import Logo from "@/public/logo.jpg";
 
 export default function Footer() {
-  const quickLinks = ['Features', 'How It Works', 'Contact', 'Use Case']
+  const quickLinks = ["Features", "How It Works", "Contact", "Use Case"];
 
   return (
-    <footer className='w-full bg-[#BDD6F0] pt-24 pb-12 px-8 md:px-16 lg:px-32'>
-      <div className='max-w-[1440px] mx-auto flex flex-col items-center text-center'>
+    <footer className="w-full bg-[#5af35a] pt-24 pb-12 px-8 md:px-16 lg:px-32">
+      <div className="max-w-[1440px] mx-auto flex flex-col items-center text-center">
         {/* Main Footer Content Grid */}
-        <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-0 items-start mb-24'>
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-0 items-start mb-24">
           {/* LEFT: Brand & Socials */}
-          <div className='flex flex-col items-center md:items-start space-y-8'>
-            <h2 className='text-5xl md:text-6xl font-serif text-[#111111] tracking-tight'>
-              ReplyAI
+          <div className="flex flex-col items-center md:items-start space-y-8">
+            <h2 className="text-5xl md:text-6xl font-serif text-[#111111] tracking-tight">
+              <Image
+                src={Logo}
+                width={400}
+                height={400}
+                alt="logo"
+                className="size-20 rounded-2xl"
+              />
             </h2>
 
-            <div className='flex gap-4'>
-              
-
+            <div className="flex gap-4">
               {/* X (formerly Twitter) */}
               <a
-                href='http://x.com/zkvibes_'
-                className='w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#000000] hover:scale-110 transition-transform shadow-sm'
-                aria-label='X (Twitter)'
+                href="http://x.com/zkvibes_"
+                className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#000000] hover:scale-110 transition-transform shadow-sm"
+                aria-label="X (Twitter)"
               >
                 <FaXTwitter size={20} />
               </a>
@@ -96,16 +102,16 @@ export default function Footer() {
           </div>
 
           {/* RIGHT: Quick Links */}
-          <div className='flex flex-col items-center md:items-center space-y-4'>
-            <h4 className='font-serif text-2xl md:text-3xl text-[#111111] mb-2'>
+          <div className="flex flex-col items-center md:items-center space-y-4">
+            <h4 className="font-serif text-2xl md:text-3xl text-[#111111] mb-2">
               Quick Links
             </h4>
-            <nav className='flex flex-col space-y-3'>
+            <nav className="flex flex-col space-y-3">
               {quickLinks.map((link) => (
                 <a
                   key={link}
-                  href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-                  className='text-[#444444] hover:text-black text-lg transition-colors font-medium'
+                  href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="text-[#444444] hover:text-black text-lg transition-colors font-medium"
                 >
                   {link}
                 </a>
@@ -115,12 +121,12 @@ export default function Footer() {
         </div>
 
         {/* BOTTOM: Copyright Section */}
-        <div className='w-full border-t border-black/5 pt-10'>
-          <p className='text-sm md:text-base text-[#444444]/70 font-serif italic'>
+        <div className="w-full border-t border-black/5 pt-10">
+          <p className="text-sm md:text-base text-[#444444]/70 font-serif italic">
             @ {new Date().getFullYear()} ReplyAI Inc. All Rights Reserved.
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

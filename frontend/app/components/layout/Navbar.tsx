@@ -98,52 +98,62 @@
 //   )
 // }
 
-'use client'
+"use client";
 
-import React, { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "@/public/logo.jpg";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
-    { name: 'How it works', href: '#how-it-works' },
-    { name: 'Docs', href: '#docs' },
-  ]
+    { name: "Features", href: "#features" },
+    { name: "How it works", href: "#how-it-works" },
+    { name: "Docs", href: "#docs" },
+  ];
 
   const handleScrollToTry = () => {
-    setMenuOpen(false)
-    const element = document.getElementById('try-now')
+    setMenuOpen(false);
+    const element = document.getElementById("try-now");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
-    <nav className='fixed top-0 z-[100] w-full bg-[#1A1A1A] h-20 md:h-24'>
+    <nav className="fixed top-0 z-[100] w-full bg-[#050c05] h-20 md:h-24">
       {/* Increased side margins: 
         px-8 for mobile, px-16 for tablet, and px-32 (128px) for desktop 
         to ensure elements aren't touching the screen edges.
       */}
-      <div className='max-w-[1920px] mx-auto h-full px-8 md:px-16 lg:px-32 flex items-center justify-between'>
+      <div className="max-w-[1920px] mx-auto h-full px-8 md:px-16 lg:px-32 flex items-center justify-between">
         {/* LEFT: Logo */}
-        <div className='flex-1 flex justify-start'>
-          <a
-            href='/'
-            className='font-bold text-2xl tracking-tight text-white shrink-0 hover:opacity-80 transition-opacity'
+        <div className="flex-1 flex justify-start">
+          <Link
+            href="/"
+            className=" flex justify-center items-center font-bold text-2xl tracking-tight text-white shrink-0 hover:opacity-80 transition-opacity"
           >
-            PromptScore
-          </a>
+            <Image
+              src={Logo}
+              width={400}
+              height={400}
+              alt="logo"
+              className="size-14 rounded-2xl"
+            />
+            <span className="text-sm">zkvibes</span>
+          </Link>
         </div>
 
         {/* CENTER: Navigation Links */}
-        <div className='hidden lg:flex flex-1 justify-center gap-12'>
+        <div className="hidden lg:flex flex-1 justify-center gap-12">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className='text-[15px] text-white/70 hover:text-white transition-colors duration-200'
+              className="text-[15px] text-white/70 hover:text-white transition-colors duration-200"
             >
               {link.name}
             </a>
@@ -151,29 +161,29 @@ export default function Navbar() {
         </div>
 
         {/* RIGHT: Reduced "Try Now" Button */}
-        <div className='hidden lg:flex flex-1 justify-end'>
+        <div className="hidden lg:flex flex-1 justify-end">
           <button
             onClick={handleScrollToTry}
-            className='premium-pill-button relative flex items-center justify-center transition-all active:scale-95 hover:brightness-110'
+            className="bg-[#1d7b1b] relative flex items-center justify-center transition-all active:scale-95 hover:brightness-110"
             style={{
-              width: '180px', // Reduced further for elegance
-              height: '48px', // Reduced further
-              backgroundColor: '#AE61FF',
-              borderRadius: '32px',
+              width: "180px", // Reduced further for elegance
+              height: "48px", // Reduced further
+              backgroundColor: "#1d7b1b",
+              borderRadius: "32px",
             }}
           >
-            <span className='text-white text-[14px] font-semibold'>
+            <span className="text-white text-[14px] font-semibold">
               Try Now
             </span>
           </button>
         </div>
 
         {/* HAMBURGER: Improved fit and alignment */}
-        <div className='lg:hidden flex justify-end flex-1'>
+        <div className="lg:hidden flex justify-end flex-1">
           <button
-            className='text-white p-2 hover:bg-white/5 rounded-lg transition-colors'
+            className="text-white p-2 hover:bg-white/5 rounded-lg transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label='Toggle Menu'
+            aria-label="Toggle Menu"
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -182,21 +192,21 @@ export default function Navbar() {
 
       {/* Mobile/Tablet Menu Overlay */}
       {menuOpen && (
-        <div className='lg:hidden fixed inset-0 w-full h-screen bg-[#1A1A1A] flex flex-col items-center justify-center gap-10 animate-in fade-in duration-300 z-[101]'>
+        <div className="lg:hidden fixed inset-0 w-full h-screen bg-[#1A1A1A] flex flex-col items-center justify-center gap-10 animate-in fade-in duration-300 z-[101]">
           <button
-            className='absolute top-8 right-8 text-white p-2 hover:bg-white/5 rounded-full'
+            className="absolute top-8 right-8 text-white p-2 hover:bg-white/5 rounded-full"
             onClick={() => setMenuOpen(false)}
           >
             <X size={30} />
           </button>
 
-          <div className='flex flex-col items-center gap-8'>
+          <div className="flex flex-col items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className='text-2xl font-medium text-white/70 hover:text-white transition-colors'
+                className="text-2xl font-medium text-white/70 hover:text-white transition-colors"
               >
                 {link.name}
               </a>
@@ -204,12 +214,12 @@ export default function Navbar() {
           </div>
 
           <button
-            className='premium-pill-button text-white text-lg font-semibold'
+            className="premium-pill-button text-white text-lg font-semibold"
             style={{
-              width: '220px',
-              height: '54px',
-              backgroundColor: '#AE61FF',
-              borderRadius: '32px',
+              width: "220px",
+              height: "54px",
+              backgroundColor: "#050c05",
+              borderRadius: "32px",
             }}
             onClick={handleScrollToTry}
           >
@@ -218,5 +228,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }
