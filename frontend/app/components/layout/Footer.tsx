@@ -82,27 +82,11 @@ export default function Footer() {
             </h2>
 
             <div className='flex gap-4'>
-              {/* LinkedIn */}
-              <a
-                href='#'
-                className='w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#0077B5] hover:scale-110 transition-transform shadow-sm'
-                aria-label='LinkedIn'
-              >
-                <FaLinkedinIn size={20} />
-              </a>
-
-              {/* Instagram */}
-              <a
-                href='#'
-                className='w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#E4405F] hover:scale-110 transition-transform shadow-sm'
-                aria-label='Instagram'
-              >
-                <FaInstagram size={20} />
-              </a>
+              
 
               {/* X (formerly Twitter) */}
               <a
-                href='#'
+                href='http://x.com/zkvibes_'
                 className='w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#000000] hover:scale-110 transition-transform shadow-sm'
                 aria-label='X (Twitter)'
               >
