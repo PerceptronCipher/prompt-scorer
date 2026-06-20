@@ -79,7 +79,7 @@ export default function Footer() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-0 items-start mb-24">
           {/* LEFT: Brand & Socials */}
           <div className="flex flex-col items-center md:items-start space-y-8">
-            <h2 className="text-5xl md:text-6xl font-serif text-white tracking-tight">
+            <h2 className="text-xl font-serif text-black font-black tracking-tight">
               APEX AI
             </h2>
 
