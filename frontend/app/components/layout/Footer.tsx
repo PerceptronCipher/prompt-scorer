@@ -79,20 +79,14 @@ export default function Footer() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-0 items-start mb-24">
           {/* LEFT: Brand & Socials */}
           <div className="flex flex-col items-center md:items-start space-y-8">
-            <h2 className="text-5xl md:text-6xl font-serif text-[#111111] tracking-tight">
-              <Image
-                src={Logo}
-                width={400}
-                height={400}
-                alt="logo"
-                className="size-20 rounded-2xl"
-              />
+            <h2 className="text-5xl md:text-6xl font-serif text-white tracking-tight">
+              APEX AI
             </h2>
 
             <div className="flex gap-4">
               {/* X (formerly Twitter) */}
               <a
-                href="http://x.com/zkvibes_"
+                href="http://x.com/apexai_i?s=21"
                 className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#000000] hover:scale-110 transition-transform shadow-sm"
                 aria-label="X (Twitter)"
               >
