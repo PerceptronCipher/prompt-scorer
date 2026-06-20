@@ -136,14 +136,7 @@ export default function Navbar() {
             href="/"
             className=" flex justify-center items-center font-bold text-2xl tracking-tight text-white shrink-0 hover:opacity-80 transition-opacity"
           >
-            <Image
-              src={Logo}
-              width={400}
-              height={400}
-              alt="logo"
-              className="size-14 rounded-2xl"
-            />
-            <span className="text-sm">zkvibes</span>
+            Apex AI
           </Link>
         </div>
 
