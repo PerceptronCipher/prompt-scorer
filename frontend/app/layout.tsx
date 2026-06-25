@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'APEX AI | Improve Your AI Results',
+  title: 'Cortex AI | Improve Your AI Results',
   description:
     'Instantly analyze your prompts for clarity, structure, and effectiveness with Neural Validator v2.1',
 }
