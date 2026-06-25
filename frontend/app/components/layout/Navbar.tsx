@@ -136,7 +136,7 @@ export default function Navbar() {
             href="/"
             className=" flex justify-center items-center font-bold text-2xl tracking-tight text-white shrink-0 hover:opacity-80 transition-opacity"
           >
-            Apex AI
+            Cortex 
           </Link>
         </div>
 
