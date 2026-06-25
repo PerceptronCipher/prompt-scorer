@@ -80,13 +80,13 @@ export default function Footer() {
           {/* LEFT: Brand & Socials */}
           <div className="flex flex-col items-center md:items-start space-y-8">
             <h2 className="text-xl font-serif text-black font-black tracking-tight">
-              APEX AI
+              Cortex
             </h2>
 
             <div className="flex gap-4">
               {/* X (formerly Twitter) */}
               <a
-                href="http://x.com/apexai_i?s=21"
+                href="https://x.com/corteeexx?s=21"
                 className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#000000] hover:scale-110 transition-transform shadow-sm"
                 aria-label="X (Twitter)"
               >
@@ -117,7 +117,7 @@ export default function Footer() {
         {/* BOTTOM: Copyright Section */}
         <div className="w-full border-t border-black/5 pt-10">
           <p className="text-sm md:text-base text-[#444444]/70 font-serif italic">
-            @ {new Date().getFullYear()} ReplyAI Inc. All Rights Reserved.
+            @ {new Date().getFullYear()} Cortex Inc. All Rights Reserved.
           </p>
         </div>
       </div>
