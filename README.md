@@ -6,15 +6,6 @@ Paste any AI prompt and get an instant quality score with detailed feedback and 
 
 ---
 
-## Live Demo
-
-| Service | URL |
-|---|---|
-| Backend API | _Coming soon_ |
-| Frontend | https://prompt-scorer-ashen.vercel.app |
-
----
-
 ## What It Does
 
 - Paste any prompt and get scored on 3 categories: Clarity, Specificity, and Structure
